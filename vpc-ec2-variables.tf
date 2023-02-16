@@ -9,3 +9,8 @@ variable "instance_type"{
     default = "t2.micro"
     description = "instance type for the ec2" 
 }
+variable "private_instance_count"{
+    type = number
+    default = 1
+    description = "instance count" 
+}

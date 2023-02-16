@@ -1,3 +1,3 @@
 key_name = "terraform-key"
 instance_type = "t2.micro"
-count = 2
+private_instance_count = 2
