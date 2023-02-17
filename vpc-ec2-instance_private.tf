@@ -5,7 +5,7 @@ module "ec2_instance_private" {
     for_each = toset(["0", "1"])
     name = "ec2_instance_private"
 
-    ami                    = "data.aws_ami.amzlinux2.id"
+    ami                    = data.aws_ami.amzlinux2.id
     instance_type          = var.instance_type
     key_name               = var.key_name
     vpc_security_group_ids = [module.sg_privategroup.security_group_id]

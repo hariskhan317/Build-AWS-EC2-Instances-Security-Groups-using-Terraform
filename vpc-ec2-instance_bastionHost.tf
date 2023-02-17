@@ -4,7 +4,7 @@ module "ec2_instance_bastionHost" {
 
   name = "ec2_instance_bastionHost"
 
-  ami                    = "data.aws_ami.amzlinux2.id"
+  ami                    = data.aws_ami.amzlinux2.id
   instance_type          = var.instance_type
   key_name               = var.key_name
   vpc_security_group_ids = [module.sg_bastionhost.security_group_id]
