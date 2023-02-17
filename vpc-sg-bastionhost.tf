@@ -4,7 +4,7 @@ module "sg_bastionhost" {
     //   
     name        = "bastionhost_public"
     description = "Security group with SSH port open for everybody (IPv4 CIDR), egress ports are all world open"
-    vpc_id      =  module.vpc.vpc.id
+    vpc_id      =  module.vpc.vpc_id
     // ingress 
     ingress_cidr_blocks      = ["0.0.0.0/0"]
     ingress_rules            = ["ssh-tcp"]
